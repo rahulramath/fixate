@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+
+<html>
+  <head>
+    <title>Timer</title> 
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"> 
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--<link href="assets/css/bootstrap.min.css" rel="stylesheet">-->
+  </head>
+
+<body>
+  <div id="wrapper">
+    <header id="header">
+      <nav class="main">
+        <ul>
+          <li class="menu">
+            <a class="fa-bars" href="#menu">Menu</a>
+          </li>
+        </ul>
+      </nav>
+
+      <h1><a href="timer.html">Fixate</a></h1>
+    </header>
+
+    <!-- Menu -->
+    <section id="menu">
+
+      <!-- Links -->
+       <section>
+        <ul class="links">
+           <li>
+            <a href="homepage.html">
+              <h3>Timing</h3>
+              <p>Reset your sessions/breaks</p>
+            </a>
+          </li>
+          <li>
+            <a href="activities.html">
+              <h3>Activities</h3>
+              <p>Add/View your activities</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="graphs.html">
+              <h3>Graphs</h3>
+              <p>Check your progress</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="settings.html">
+              <h3>Settings</h3>
+              <p>Change your preferences</p>
+            </a>
+          </li>
+
+          <li>
+            <a href="index.html">
+              <h3>Logout</h3>
+              <p>Goodbye</p>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Actions 
+      <section>
+        <ul class="actions vertical">
+          <li>
+          <a href="#" class="button big fit">Log In</a>
+          </li>
+        </ul>
+      </section>-->
+    </section>
+
+    <!-- ACTUAL PAGE STARTS HERE -->
+    <section id="sidebar">
+
+      <section id="intro">
+
+        <!-- Title -->
+        <header>
+          <h2>BREAK REMAINING</h2>
+          <p>How much time you have left for your break</p>
+        </br>
+      </header>
+      <div id="countdown">
+        <p>00:00</p>
+      </div>
+     
+     </br>
+      <div id="begin">        
+        <a href="#">
+          <p class="submit"><input type="submit" name="commit" value="Start";> </p>
+       </a> 
+      </div>
+      <div id="resume">        
+        <a href="#">
+          <p class="submit"><input type="submit" name="commit" value="Resume";> </p>
+       </a> 
+      </div>
+      <div id="pause">        
+        <a href="#">
+          <p class="submit"><input type="submit" name="commit" value="Pause"></p>
+       </a> 
+      </div>
+       <div id="end">        
+        <a href="timer.html">
+          <p class="submit"><input type="submit" name="commit" value="Begin Next Study Session";> </p>
+       </a> 
+      </div>
+     <!-- <div id="sessions">
+        <h3>Sessions Remaining:  <input type="submit" name="commit" value="#" onclick="getSession()"></h3>
+
+      </div>  -->
+
+    </div>
+
+  </section>
+</section>
+</section>
+</div>
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/introHCI.js"></script>
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/countdownbreak.js"></script>
+
+   <script>
+      function getSession() {
+         $.getJSON("./accounts.html", function(json) {
+          //console.log(json[0].accounts);
+          var sessions = json[0].accounts[0].sessions; 
+          alert(sessions);
+          });
+        }
+  </script>
+
+</body>
+</html>
